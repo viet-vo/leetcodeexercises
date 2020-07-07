@@ -36,21 +36,19 @@ const intersect = function (nums1, nums2) {
   map = {};
   key = 0;
   arr = [];
-  if (nums1.length < nums2.length) {
-    intersect(nums2, nums1);
+  if (nums1.length > nums2.length) {
+    [nums1, nums2] = [nums2, nums1];
   }
   for (let i = 0; i < nums1.length; i++) {
-    map[nums1[i]] === undefined
-      ? (map[nums1[i]] = [nums1[i]])
-      : map[nums1[i]].push(nums1[i]);
+    map[nums1[i]] === undefined ? (map[nums1[i]] = 1) : (map[nums1[i]] += 1);
   }
   nums2.forEach((x) => {
-    if (map[x] && map[x] != 0) {
+    if (map[x] && map[x] >= 0) {
       arr.push(x);
+      map[x] -= 1;
     }
   });
-  console.log(map);
-  console.log(arr);
+  return arr;
 };
 
 intersect([1, 2, 2, 1], [2, 2]);
