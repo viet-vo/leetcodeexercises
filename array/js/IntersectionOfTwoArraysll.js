@@ -34,26 +34,22 @@ What if elements of nums2 are stored on disk, and the memory is limited such tha
 
 const intersect = function (nums1, nums2) {
   map = {};
-  map = {};
+  key = 0;
   arr = [];
+  if (nums1.length < nums2.length) {
+    intersect(nums2, nums1);
+  }
   for (let i = 0; i < nums1.length; i++) {
-    map1[nums1[i]] === undefined
-      ? (map1[nums1[i]] = [nums1[i]])
-      : map1[nums1[i]].push(nums1[i]);
+    map[nums1[i]] === undefined
+      ? (map[nums1[i]] = [nums1[i]])
+      : map[nums1[i]].push(nums1[i]);
   }
-  for (let j = 0; j < nums2.length; j++) {
-    map2[nums2[j]] === undefined
-      ? (map2[nums2[j]] = [nums2[j]])
-      : map2[nums2[j]].push(nums2[j]);
-  }
-  console.log(map1, map2);
-  for (key in map1) {
-    if (JSON.stringify(map1[key]) == JSON.stringify(map2[key])) {
-      arr = arr.concat(map1[key]);
-    } else if(map1[key].length !== map2[key].length) {
-        console.log("made it to test")
+  nums2.forEach((x) => {
+    if (map[x] && map[x] != 0) {
+      arr.push(x);
     }
-  }
+  });
+  console.log(map);
   console.log(arr);
 };
 
