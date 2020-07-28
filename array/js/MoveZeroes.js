@@ -17,9 +17,10 @@ Minimize the total number of operations.
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var moveZeroes = function (nums) {
+    counter = nums.length;
     
 
-    console.log();
+    console.log(nums);
 };
 
 moveZeroes([0, 1, 0, 3, 12]);
