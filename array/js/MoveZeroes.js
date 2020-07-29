@@ -18,7 +18,11 @@ Minimize the total number of operations.
  */
 var moveZeroes = function (nums) {
     counter = nums.length;
-    
+    for (let i = 0; i < counter; i++) {
+        if (nums[i] === 0) {
+            
+        }
+    }
 
     console.log(nums);
 };
