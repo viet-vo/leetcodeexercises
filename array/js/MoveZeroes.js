@@ -24,17 +24,14 @@ var moveZeroes = function (nums) {
     if (nums[i] === 0) {
       counter++;
     }
-    console.log(nums);
   }
   nums = nums.filter(function (value, index, arr) {
     return value !== 0;
   });
-  console.log(counter);
   while (counter != 0) {
     counter--;
     nums.push(0);
   }
-  console.log(nums);
 };
 
 moveZeroes([0, 1, 0, 3, 12]);
