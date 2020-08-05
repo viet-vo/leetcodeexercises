@@ -12,7 +12,7 @@ Minimize the total number of operations.
 
 ? Current thought process is to loop through array with a counter to keep track of length of remaining array that hasn't been check if there are 0's. Next is to remove the 0 at the point of the array I am at if there is a 0 and just add a 0 to the end.
 ? 2020.8.4 Ran into the issue of index skipping when running into a 0
-? New approach is to count the zero then add to it after
+? New approach is to count the zero then add to it after using a counter
 */
 /**
  * @param {number[]} nums
@@ -29,6 +29,11 @@ var moveZeroes = function (nums) {
   nums = nums.filter(function (value, index, arr) {
     return value !== 0;
   });
+  console.log(counter);
+  while (counter != 0) {
+    counter--;
+    nums.push(0);
+  }
   console.log(nums);
 };
 
