@@ -31,7 +31,8 @@ var twoSum = function (nums, target) {
       console.log([parseInt(i), parseInt(hash[complementDifference])]);
     return [nums[i], complementDifference];
   }
-  //TODO Edge case if the sum is two of the same addends (this might not need to be accounted for if it's guarenteed that the correct difference is in the array)
+  // TODO Edge case if the sum is two of the same addends (this might not need to be accounted for if it's guarenteed that the correct difference is in the array)
+  // Now that the correct version of the solution is made, it certainly looks like I will run into the issue of this edge case. A solution might be to somehow look up the keys in reverse (REVERSE THE ARRAY BEFORE LOOPING) or keeping the first index in a variable and removing the first key of the duplicate value
   console.log(hash);
 };
 
