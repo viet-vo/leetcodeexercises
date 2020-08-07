@@ -39,4 +39,7 @@ var twoSum = function (nums, target) {
 
 twoSum([2, 7, 11, 15], 9);
 twoSum([1, 2, 1, 3], 2);
+<<<<<<< HEAD
 twoSum([3, 2, 4], 6);
+=======
+>>>>>>> 21f0481070cbfde0a3eeebd8f41dcc378a7e6b04
