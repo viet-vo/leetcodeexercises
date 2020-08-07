@@ -23,15 +23,15 @@ var twoSum = function (nums, target) {
   console.log(nums + " is the list of addends for the sum: " + target);
   hash = new Map();
   for (i in nums) {
-    hash[nums[i]] !== NaN ? (hash[nums[i]] = 1) : hash[nums[i]]++;
+    hash[nums[i]] = i;
   }
   for (i in nums) {
     complementDifference = target - nums[i];
     if (hash[complementDifference])
-      console.log([nums[i], complementDifference]);
-      return [nums[i], complementDifference];
+      console.log([parseInt(i), parseInt(hash[complementDifference])]);
+    return [nums[i], complementDifference];
   }
-  //TODO Edge case if the sum is two of the same addends
+  //TODO Edge case if the sum is two of the same addends (this might not need to be accounted for if it's guarenteed that the correct difference is in the array)
   console.log(hash);
 };
 
