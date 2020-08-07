@@ -21,6 +21,18 @@ return [0, 1].
  */
 var twoSum = function (nums, target) {
   console.log(nums + " is the list of addends for the sum: " + target);
+  hash = new Map();
+  for (i in nums) {
+    hash[nums[i]] !== NaN ? (hash[nums[i]] = 1) : hash[nums[i]]++;
+  }
+  for (i in nums) {
+    complementDifference = target - nums[i];
+    if (hash[complementDifference])
+      console.log([nums[i], complementDifference]);
+      return [nums[i], complementDifference];
+  }
+  //TODO Edge case if the sum is two of the same addends
+  console.log(hash);
 };
 
 twoSum([2, 7, 11, 15], 9);
