@@ -41,3 +41,12 @@ var twoSum = function (nums, target) {
 twoSum([2, 7, 11, 15], 9);
 twoSum([1, 2, 1, 3], 2);
 twoSum([3, 2, 4], 6);
+
+
+/* 
+! 2020.08.08
+Post solution notes:
+The space complexity for this the two sum solution is O(n) due to the hashmap lookup while the space complexity is O(n) as well
+While you can condense the code pass through the loop once as well, the time and space complexity is still O(n)
+If the any of the addends appear towards the end of the array the solution accepted will be quicker as the one pass just checks the map while the hashmap is mapped out
+*/ 
