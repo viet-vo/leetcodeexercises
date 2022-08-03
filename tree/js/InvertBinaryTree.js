@@ -21,26 +21,15 @@ var invertTree = function (root) {
   console.log(runs);
   runs = runs + 1;
 
-  if ((root = null)) {
-    if (root.left !== null) {
-      console.log(root);
-      root.left.val = root.left.val ^ root.right.val;
-      root.right.val = root.left.val ^ root.right.val;
-      root.left.val = root.left.val ^ root.right.val;
-      console.log(root);
-      invertTree(root.left);
-    } else if (root.right !== null) {
-      console.log(root);
-      root.left.val = root.left.val ^ root.right.val;
-      root.right.val = root.left.val ^ root.right.val;
-      root.left.val = root.left.val ^ root.right.val;
-      console.log(root);
-      invertTree(root.right);
-    } else {
-      return;
-    }
-    return;
-  }
-
+  if (root != null) {
+// This is where we cycle through both branches. Initially, I had thought about approaching recursion this way but logically I could not follow how I would run through all the branches.
+//todo I need to process the process of this method to fully understand. My previous todo comment would not support the method of recursion succinctly.
+// After commenting above, following the function below would traverse the branches left-most first until null, then check for right-branch, and so on. Then, it will proceed to switch the branches.
+// This method would make sure all the inverses are followed up from all the extremity branches proceeding with the root most branch.
+//todo Look up why would you need to inverse a binary tree.
+    invertTree(root.left);
+    invertTree(root.right);
+// This is where we switch branches
+  };
   return root;
 };
