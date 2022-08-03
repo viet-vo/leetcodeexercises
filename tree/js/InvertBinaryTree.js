@@ -10,6 +10,7 @@
 //? After viewing the video example in the solution video section, 2 solutions are explained both with O(n) for time and space complexity. Those 2 are recursive and interive (with fifo queue).
 //? I will work on a recursive method.
 //todo Try a 2 function recursion method to not run into null errors.
+//! 3rd Night working on, will watch recursion coding example and attempt after
 
 /**
  * @param {TreeNode} root
