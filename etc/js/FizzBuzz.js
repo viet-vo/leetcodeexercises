@@ -25,3 +25,6 @@ var fizzBuzz = function (n) {
   }
   return arr;
 };
+
+// Post problem realization, the elegant solution is piecewise ternary operation to check for module 3 and module 5 else return index.
+// Example: (i++ % 3 ? '' : 'fizz') + (i % 5 ? '' : 'buzz') || i
